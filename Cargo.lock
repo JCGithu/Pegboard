@@ -6,6 +6,7 @@ version = 4
 name = "Pegboard"
 version = "0.1.0"
 dependencies = [
+ "colored",
  "rayon",
  "regex",
  "walkdir",
@@ -18,6 +19,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916"
 dependencies = [
  "memchr",
+]
+
+[[package]]
+name = "colored"
+version = "3.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fde0e0ec90c9dfb3b4b1a0891a7dcd0e2bffde2f7efed5fe7c9bb00e5bfb915e"
+dependencies = [
+ "windows-sys",
 ]
 
 [[package]]

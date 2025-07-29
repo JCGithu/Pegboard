@@ -5,6 +5,7 @@ use std::process::Command;
 use walkdir::WalkDir;
 use regex::Regex;
 use std::collections::HashSet;
+use colored::*;
 
 fn main() -> io::Result<()> {
     let base_dir = std::env::current_dir()?;
@@ -62,7 +63,8 @@ fn main() -> io::Result<()> {
         }
     }
 
-    println!("\nDone.");
+    let done = "\nDone.".green();
+    println!("{done}");
     Ok(())
 }
 
