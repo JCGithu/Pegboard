@@ -1,18 +1,11 @@
 use rayon::prelude::*;
 use std::fs;
-use std::io::{self, Write};
 use std::path::{Path};
 use std::process::Command;
 use walkdir::WalkDir;
 use colored::*;
 
-fn user_prompt(prompt: &str) -> bool {
-  print!("{} [y/N] :", prompt);
-  io::stdout().flush().unwrap();
-  let mut input = String::new();
-  io::stdin().read_line(&mut input).unwrap();
-  matches!(input.trim().to_lowercase().as_str(), "y" | "yes")
-}
+mod utils;
 
 fn convert_flac_to_mp3(input_path: &Path, output_path: &Path) -> bool {
   let filename = input_path.file_name().unwrap().to_str().expect("").green();
@@ -43,7 +36,7 @@ fn convert_flac_to_mp3(input_path: &Path, output_path: &Path) -> bool {
 }
 
 fn main() {
-  let delete_originals = user_prompt("Delete original files?");
+  let delete_originals = utils::user_prompt("Delete original files?");
   let input_dir = Path::new(".");
 
   WalkDir::new(input_dir)
