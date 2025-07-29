@@ -16,3 +16,7 @@ path = "src/songsort.rs"
 [[bin]]
 name = "flac2mp3"
 path = "src/flac2mp3.rs"
+
+[[bin]]
+name = "unbox"
+path = "src/unbox.rs"
