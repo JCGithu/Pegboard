@@ -1,6 +1,6 @@
 # Pegboard
 
-A collection of Rust command-line tools for simple tasks.
+A collection of command-line tools for simple tasks. Written in Rust.
 
 All tools only apply to the local directory and sub-directories.
 
