@@ -5,10 +5,6 @@ use std::env;
 
 mod utils;
 
-// WIP
-
-// 7z e -oFile File.zip
-
 fn add_logging() -> bool {
   let args: Vec<String> = env::args().collect();
   args.iter().any(|arg| arg == "--logging" || arg == "-l")
