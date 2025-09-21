@@ -21,7 +21,7 @@ fn main() -> io::Result<()> {
                 && e.path().extension().map_or(false, |ext| {
                     matches!(
                         ext.to_str().unwrap_or("").to_lowercase().as_str(),
-                        "mp3" | "flac"
+                        "mp3" | "flac" | "wav" | "m4a" | "ogg" | "opus" | "wma" | "aac"
                     )
                 })
         })
