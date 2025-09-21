@@ -20,3 +20,8 @@ path = "src/flac2mp3.rs"
 [[bin]]
 name = "unbox"
 path = "src/unbox.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
